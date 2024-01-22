@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../asset/icon.ico" type="image/x-icon">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Rubik+Glitch&family=Sevillana&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"
+        integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <link rel="stylesheet" href="chat.css">
+    <link rel="stylesheet" href="../boiler.css">
+    <title>EMP/Mecha</title>
+</head>
+
+<body>
+    <nav>
+        <div>
+            <div id="nav_left">
+                <!-- <h2>Surajmal Vihar-EMP</h2> -->
+                <img src="../asset/sose.png" alt="">
+                <img src="../asset/logo_emp.png" alt="">
+                <img src="../asset/logo.png" alt="">
+            </div>
+            <div id="nav_middle">
+
+                <a href="../index.html" class="links">Home</a>
+                <a href="contacts.html" class="links">Contact</a>
+                <a href="latest.html" class="links">Latests</a>
+                <a href="events.html" class="links">Event</a>
+
+            </div>
+            <div id="nav_right">
+                <a href="chat.html"><ion-icon name="chatbubble"></ion-icon></a>
+                <a href=""><ion-icon name="bug"></ion-icon></a>
+                <a href=""><ion-icon name="search"></ion-icon></a>
+                <a href=""><ion-icon name="notifications"></ion-icon></a>
+
+            </div>
+        </div>
+        <div id="hidden">
+
+            <a href="../index.html" class="links">Home</a>
+            <a href="contacts.html" class="links">Contact</a>
+            <a href="latest.html" class="links">Latests</a>
+            <a href="events.html" class="links">Event</a>
+
+        </div>
+    </nav>
+
+    <main>
+        <section id="page1" style="min-height: 100vh; height: auto; padding-bottom: 0;">
+            <div id="top" style="display: flex;flex-direction: column;justify-content: center;align-items: center;">
+                <p style="width: 200px;
+                    height: 200px;
+                    background-position: center -145px;
+                    background-image: url(../asset/ai.gif);
+                    background-size: 700px;
+                    border-radius: 500px;
+                    border: 2px solid black;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    ">
+                </p>
+                <h1 id="ai">Mecha</h1>
+                <h4>Ask me anything related to EMP club</h4>
+            </div>
+
+
+            <div id="bottom" style="padding: 25px; min-height: 300px;">
+                <div id="bottom_top" style="    display: flex;
+                    height: 90%;
+                    align-items: center;
+                    flex-direction: column;">
+
+
+                </div>
+                <div id="bottom_bottom">
+                    <div id="inputDiv">
+                        <input type="text" id="input" placeholder="Type your message...">
+                        <button id="send"><ion-icon name="arrow-up-circle"></ion-icon></button>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </section>
+
+
+        <script src="dumb.js"></script>
+
+
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+#page1 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(
+    338deg,
+    rgb(193 146 146) 0%,
+    rgba(116, 115, 255, 1) 35%,
+    rgba(107, 107, 255, 1) 59%,
+    rgba(89, 164, 159, 1) 81%,
+    rgba(194, 194, 194, 1) 100%
+  );
+  flex-direction: column;
+  align-items: center;
+}
+.tabs {
+  height: 90%;
+  width: 24.5%;
+  margin-inline: 0.5%;
+  min-width: 350px;
+  border: 0.5px solid black;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.ttop {
+  width: 100%;
+  height: 50px;
+  border-bottom: 0.5px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tbot {
+  height: calc(100% - 50px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: larger;
+}
+.tbot > div {
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.tbot span {
+  width: 200px;
+  height: 200px;
+  border-radius: 400px;
+  background-image: url("https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg");
+  background-size: cover;
+  background-position: center;
+}
+@media only screen and (max-width: 1100px) {
+  iframe {
+    width: 95vw;
+  }
+}

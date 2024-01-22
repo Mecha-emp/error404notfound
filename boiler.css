@@ -1,0 +1,200 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+@font-face {
+  font-family: badGhost;
+  src: url("asset/Top_Secret.ttf");
+}
+@font-face {
+  font-family: blippo;
+  src: url("asset/blippo.ttf");
+}
+#ai {
+  font-family: blippo;
+  margin: 15px;
+  font-size: 40px;
+}
+nav {
+  display: flex;
+  width: 100%;
+  min-height: 100px;
+  border-bottom: 0.5px solid #000000;
+  background-color: white;
+  position: fixed;
+  flex-wrap: wrap;
+  top: 0;
+  z-index: 99;
+}
+
+nav > div {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+}
+#nav_left {
+  justify-content: center;
+}
+#nav_left,
+#nav_right {
+  display: flex;
+  align-items: center;
+  width: 40%;
+  padding: 10px;
+}
+#nav_middle {
+  display: flex;
+  width: 20%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#nav_right {
+  justify-content: end;
+}
+#nav_right a {
+  font-size: 25px;
+  color: rgb(71, 71, 71);
+  margin-inline: 2.5px;
+  display: none;
+}
+#nav_right a:nth-child(1) {
+  width: 75px;
+  height: 75px;
+  background-image: url("asset/mecha.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#nav_right a:nth-child(1) {
+  display: block;
+}
+main > section {
+  height: 100vh;
+  padding-top: 75px;
+}
+section#page1 {
+  padding-top: 125px;
+}
+a.links {
+  text-decoration: none;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  font-size: smaller;
+  color: black;
+}
+
+nav img {
+  width: 90px;
+}
+#hidden {
+  display: none;
+}
+footer {
+  width: 100%;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 0.5px solid #cccccc;
+  background-color: black;
+  color: white;
+  padding: 20px;
+}
+footer a {
+  padding-inline: 10px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #ffffff;
+  border: 0.5px solid white;
+  border-radius: 10px;
+}
+[logo] {
+  width: 95px;
+  height: 95px;
+  border-radius: 40px;
+  background-image: url("asset/logo\ -\ Copy.png");
+  background-size: cover;
+  margin-right: 50px;
+}
+.in-viewport {
+  transform: translateY(0px);
+  /* border-radius: 5px 15px 5px 15px; */
+  opacity: 1;
+  transition: 0.25s ease-in-out;
+}
+
+.out-of-viewport {
+  transition: 0.1s ease-in-out;
+  transform: translateY(50px);
+  border-radius: 0px;
+  opacity: 0;
+}
+@media only screen and (max-width: 1100px) {
+  /* nav {
+    background-color: #f5f5f5;
+  } */
+  section#page1 {
+    padding-top: 175px;
+    height: auto;
+    min-height: 100vh;
+  }
+  #hidden {
+    display: flex;
+    height: 50px;
+    /* justify-content: space-around; */
+    align-items: center;
+  }
+  #hidden a {
+    margin: 20px;
+  }
+  #nav_middle {
+    display: none;
+  }
+  #nav_left {
+    width: 70%;
+    justify-content: start;
+  }
+  #nav_right {
+    width: 30%;
+  }
+  nav img {
+    width: 75px;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+  }
+  [logo] {
+    margin: 10px;
+  }
+}
+::-webkit-scrollbar {
+  width: 5px; /* Set width of the scrollbar */
+  height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f100; /* Set the background color of the track */
+  transition: 0.1s ease-in;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; /* Set the color of the scrollbar handle */
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #000000;
+  /* width: 16px; */
+}
