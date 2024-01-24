@@ -78,7 +78,21 @@ button {
 /* section a {
     
 } */
-
+.downloadBtn {
+  padding: 5px 10px 5px 10px;
+  border-radius: 5px;
+  background-color: #007bff66;
+  /* border: 0.5px  #007bff66; */
+  margin: 5px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  box-shadow: 3px 2px 0px grey;
+  transition: 0.1s ease-in;
+}
+.downloadBtn :hover {
+  box-shadow: 3px 2px 0px grey;
+  transform: translateX(3px), translateY(2);
+}
 .chat_left {
   height: 25px;
   background-color: rgb(240, 242, 245);
