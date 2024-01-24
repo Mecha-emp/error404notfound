@@ -40,17 +40,17 @@ function generate() {
     const sect = document.getElementById('page1')
 
 
-    
+
     const chatbotRequests = ["please give", "i need information", "could you assist", "do you know", "how does", "could you", "give me", "give me", "i have a question", "could you clarify", "provide some details on", "i need", "share your", "what is your", "i wouldd like to learn more about", "can you", "tell me your", "provide information about", "guide me", , "tell me ", "i have a query about", "please share your thoughts",];
-    const eroticWords = ['sex','nang','xxx','mukta','porn','chud','chut','condom','lund','pussy','boob','gand','kutta','kutti','kuti','madher','chod','randi','randa','lode','loda','lode','bhosd','gay','leabian','trans','ananya','fuck','mother','father','sucking','tanvi','abhinav','bablu','pankaj','manav','nigga','nikhil','nehal','simran','yanshika','kaif','kiss','blowjob','handjob','threesome','gangbang','bitch','girl','vanshika','deepshikha','vipin','behencho','launda','hentai','memes','carryminati','abusing','sperm','cumshot','semen']
-    const mechatronicsTerms = ['auto', 'dc', 'ac', 'control', 'bot', 'sens', 'actuator', 'plc', 'hmi', 'pid', 'motion', 'vision', 'integration', 'embedded', 'hydraulics', 'pneumatics', 'design', 'programming', 'microcontrollers', 'motors', 'kinematics', 'dynamics', 'cad', 'cam', 'machine', 'mechaedu', 'industry', 'iot', 'learning', 'ai', 'sustainable', 'efficiency', 'vibration', 'prototyping', 'simulations', 'fault', 'dsp', 'electromechanical', 'systems', 'modeling', 'digitaltwin', 'testing', 'cobots', 'scada', 'mems', 'vr', 'electrohydraulic', 'electropneumatic', 'motion', 'manipulators', 'automatic', 'teleoperation', 'microcontroller', 'realtime', 'analysis', 'kinematics', 'optimization', 'bearings', 'nonlinear', 'adaptive', 'biomechatronics', 'humanoid', 'ethics', 'flexible', 'prototyping', 'computervision', 'telecommunications', 'acquisition', 'fea', 'raspberrypi', 'arduino', 'memssensors', 'control', 'tactile', 'applications', 'drones', 'agvs', 'materials', 'monitoring', 'fuzzylogic', 'agriculture', 'renewable', 'digitaltwin', 'exoskeletons', 'smartmaterials', 'mri', 'hybrid', 'swarm', 'biomechanics', 'wearable', 'neuralnetworks', 'simulation', 'modeling', 'motors', 'sensors', 'actuators', 'controllers', 'encoders', 'gears', 'servos', 'microcontrollers', 'power-supplies', 'batteries', 'chassis', 'frames', 'wheels', 'legs', 'joints', 'links', 'cables', 'connectors', 'brackets', 'bearings', 'grippers', 'end-effectors', 'cams', 'pulleys', 'belts', 'slides', 'rails', 'guides', 'switches', 'relays', 'valves', 'pumps', 'nozzles', 'sprayers', 'tanks', 'screws', 'nuts', 'bolts', 'washers', 'nuts-and-bolts', 'soldering-iron', 'welding-kit', 'circuit-boards', 'modules', 'solenoids', 'plugs', 'adapters', 'solder', 'heat-sinks', 'resistor', 'led', 'button', 'potentiometer', 'servo', 'motor', 'relay', 'transistor', 'diode', 'capacitor', 'breadboard', 'jumperwire', 'lcd', 'sensor', 'encoder', 'gyroscope', 'accelerometer', 'ultrasonic', 'infrared', 'bluetooth', 'wifi', 'gps', 'rtc', 'sdcard', 'steppermotor', 'driver', 'shield', 'display', 'matrix', 'touchscreen', 'piezo', 'sound', 'microphone', 'speaker', 'amplifier', 'thermistor', 'dhtsensor', 'humidity', 'gas', 'rfid', 'nfc', 'magnetic', 'photoresistor', 'colorsensor', 'irremote', 'vibration', 'joystick', 'rfmodule', 'polarize', 'emp', 'polarise', 'robot', 'induct', 'elect', 'switch', 'button', "computer", "software", "hardware", "keyboard", "monitor", "mouse",
+    const eroticWords = ['sex', 'nang', 'xxx', 'mukta', 'porn', 'chud', 'chut', 'condom', 'lund', 'pussy', 'boob', 'gand', 'kutta', 'kutti', 'kuti', 'madher', 'chod', 'randi', 'randa', 'lode', 'loda', 'lode', 'bhosd', 'gay', 'leabian', 'fuck', 'mother', 'father', 'sucking', 'tanvi', 'abhinav', 'pankaj', 'nigga', 'nikhil', 'nehal', 'simran', 'yanshika', 'kaif', 'kiss', 'blowjob', 'handjob', 'threesome', 'gangbang', 'bitch', 'girl', 'deepshikha', 'vipin', 'behencho', 'launda', 'hentai', 'memes', 'carryminati', 'abusing', 'sperm', 'cumshot', 'semen', 'abuse']
+    const mechatronicsTerms = ['auto', 'dc', 'ac', 'resist', 'power', 'control', 'bot', 'sens', 'actuator', 'plc', 'hmi', 'pid', 'motion', 'vision', 'integration', 'embedded', 'hydraulics', 'pneumatics', 'design', 'programming', 'microcontrollers', 'motors', 'kinematics', 'dynamics', 'cad', 'cam', 'machine', 'mechaedu', 'industry', 'iot', 'learning', 'ai', 'sustainable', 'efficiency', 'vibration', 'prototyping', 'simulations', 'fault', 'dsp', 'electromechanical', 'systems', 'modeling', 'digitaltwin', 'testing', 'cobots', 'scada', 'mems', 'vr', 'electrohydraulic', 'electropneumatic', 'motion', 'manipulators', 'automatic', 'teleoperation', 'microcontroller', 'realtime', 'analysis', 'kinematics', 'optimization', 'bearings', 'nonlinear', 'adaptive', 'biomechatronics', 'humanoid', 'ethics', 'flexible', 'prototyping', 'computervision', 'telecommunications', 'acquisition', 'fea', 'raspberrypi', 'arduino', 'memssensors', 'control', 'tactile', 'applications', 'drones', 'agvs', 'materials', 'monitoring', 'fuzzylogic', 'agriculture', 'renewable', 'digitaltwin', 'exoskeletons', 'smartmaterials', 'mri', 'hybrid', 'swarm', 'biomechanics', 'wearable', 'neuralnetworks', 'simulation', 'modeling', 'motors', 'sensors', 'actuators', 'controllers', 'encoders', 'gears', 'servos', 'microcontrollers', 'power-supplies', 'batteries', 'chassis', 'frames', 'wheels', 'legs', 'joints', 'links', 'cables', 'connectors', 'brackets', 'bearings', 'grippers', 'end-effectors', 'cams', 'pulleys', 'belts', 'slides', 'rails', 'guides', 'switches', 'relays', 'valves', 'pumps', 'nozzles', 'sprayers', 'tanks', 'screws', 'nuts', 'bolts', 'washers', 'nuts-and-bolts', 'soldering-iron', 'welding-kit', 'circuit-boards', 'modules', 'solenoids', 'plugs', 'adapters', 'solder', 'heat-sinks', 'resistor', 'led', 'button', 'potentiometer', 'servo', 'motor', 'relay', 'transistor', 'diode', 'capacitor', 'breadboard', 'jumperwire', 'lcd', 'sensor', 'encoder', 'gyroscope', 'accelerometer', 'ultrasonic', 'infrared', 'bluetooth', 'wifi', 'gps', 'rtc', 'sdcard', 'steppermotor', 'driver', 'shield', 'display', 'matrix', 'touchscreen', 'piezo', 'sound', 'microphone', 'speaker', 'amplifier', 'thermistor', 'dhtsensor', 'humidity', 'gas', 'rfid', 'nfc', 'magnetic', 'photoresistor', 'colorsensor', 'irremote', 'vibration', 'joystick', 'rfmodule', 'polarize', 'emp', 'polarise', 'robot', 'induct', 'elect', 'switch', 'button', "computer", "software", "hardware", "keyboard", "monitor", "mouse",
         "processor", "memory", "network", "server", "database", "firewall",
         "algorithm", "encryption", "program", "browser", "operating system",
         "interface", "motherboard", "graphics card",
-        "router", "cloud computing", "cybersecurity", "programming language",
+        "router", "cloud computing", "cyber", "programming language",
         "storage", "backup", "malware", "antivirus", "peripheral",
         "virtualization", "api",
-        "biometrics", "cache", "scripting", "debugging", "framework", "version", "data center", 'mcb', "ldr", "pid", "dcm", "plc", "hmi", "pwm", "cnc", "agv", "scada", "sbc", "iot", "mems", "cad", "vfd", "rfid", "ros", "tcp", "pld", "fms", "cad", "dof", "ai"];
+        "biometrics", "cache", "scripting", "debugging", "framework", "version", "data center", 'mcb', "ldr", "pid", "dcm", "plc", "hmi", "pwm", "cnc", "agv", "scada", "sbc", "iot", "mems", "cad", "vfd", "rfid", "ros", "tcp", "pld", "fms", "cad", "dof", "ai", 'current', 'unit', 'mobile device', 'ohm', 'meter', 'kilogram', 'second', 'ampere', 'kelvin', 'mole', 'candela', 'newton', 'pascal', 'joule', 'watt', 'coulomb', 'volt', 'farad', 'ohm', 'siemens', 'weber', 'tesla', 'henry', 'degree celsius', 'lumen', 'lux', 'hertz', 'becquerel', 'sievert', 'radian', 'steradian'];
 
 
     // Feel free to use or modify this array as needed.
@@ -72,10 +72,10 @@ function generate() {
     </div>
     `
 
-    cont.append(elem)
+        cont.append(elem)
         data = data.toLowerCase()
-    data = data.replace("'", '')
-        
+        data = data.replace("'", '')
+
         if (sect.style.paddingBottom != 'calc(100vh - 350px)') {
             sect.style.paddingBottom = 'calc(100vh - 350px)'
         }
@@ -88,24 +88,80 @@ function generate() {
         belem.setAttribute('class', 'chat bot')
         if (containsEroticTerm(data)) {
             bdata = 'I am trained not to repond on abusive words or terms but trained only to answer queries related to EMP. please fill your query in this <a href="https://forms.gle/8gbRRSdgeUfSfTAu7">form</a> if you feel we made a mistake guessing your prompt so my developer can update me. '
-        } 
+        }
         else if (data.includes('hello') || data.includes('hey') || data.includes('good morning') || data.includes('good afternoon') || data.includes('good evening')) {
 
             bdata = 'Hi, how can I help you?🙂'
 
         }
-        else if(data.includes('hi')&&!data.includes('hin')&&!data.includes('hik')&&!data.includes('shi')){
+        else if (data.includes('vice') && !data.includes('evice') || data.includes('vanshika')) {
+            bdata = `
+            <div style='display:flex ; align-items: center;'>
+                <img src='../asset/vanshika.png' style = 'width : 100px; border-radius: 500px; margin-right: 10px'></img> <strong>Vanshika Chauhan is our Vice-president from 9th-B</strong>
+            </div>
+            `
+        }
+        else if (data.includes('hi') && !data.includes('hin') && !data.includes('hik') && !data.includes('shi')) {
             bdata = 'Hi, how can I help you ?🙂'
-        }else if (data.includes('how are you')) {
+        }
+        else if (data.includes('how are you')) {
 
             bdata = 'I am fine, what about you ?'
 
-        }else if (data.includes('your name') || data.includes('who are you')|| data.includes('yourself')) {
+        } else if (data.includes('intro') && data.includes('your')) {
+
+            bdata = `
+            Hello, I'm Mecha, the chatbot created for the EMP club by Dev Raj. Many of my features have been suggested by our club members, and I'm constantly learning and evolving. My knowledge is primarily derived from study materials, and I have the ability to search the entire internet to find relevant answers for your queries. Please keep in mind that I am still in my learning phase, so I may not always provide exact answers, but my developer is actively updating me to improve my performance over time.</br></br>
+
+            You can ask me any EMP-related questions or inquire about the EMP club, and I'll do my best to provide suitable answers. Additionally, I can offer study materials to assist you in your learning journey. Thank you for your understanding and patience as I continue to enhance my capabilities.</br></br>
+            `
+
+        }
+        else if (data.includes('your name') || data.includes('who are you') || data.includes('yourself')) {
 
             bdata = 'Myself Mecha, how can I help you?🙂'
 
         }
-        else if(data.includes('tool')&&!data.includes('usa')&&!data.includes('use')){
+        else if (data.includes('future')) {
+
+            bdata = `
+            The future of Electro-Mechanical Production (EMP) holds several opportunities as technology continues to advance. Here are some generic trends and potential opportunities for individuals in the EMP field:</br></br>
+
+            <strong>Automation and Robotics:</strong>
+
+            The integration of automation and robotics in manufacturing processes is likely to increase. Professionals in EMP can explore opportunities in designing, programming, and maintaining automated systems.</br></br>
+            <strong>Smart Manufacturing:</strong>
+
+            The adoption of Industry 4.0 principles is transforming manufacturing into smart and connected systems. EMP professionals can contribute to the development and implementation of smart manufacturing technologies, including IoT devices and data analytics.</br></br>
+            <strong>Green Technologies:</strong>
+
+            The emphasis on sustainability is driving the development of green technologies. EMP experts can explore opportunities in designing and producing energy-efficient and environmentally friendly systems.</br></br>
+            <strong>Additive Manufacturing (3D Printing):</strong>
+
+            3D printing is gaining prominence in manufacturing. EMP specialists can explore opportunities in designing components for 3D printing and optimizing production processes using additive manufacturing techniques.</br></br>
+            <strong>Digital Twins:</strong>
+
+            The concept of digital twins, creating virtual replicas of physical systems, is becoming more prevalent. EMP professionals can work on developing and maintaining digital twins for optimizing production processes and troubleshooting.</br></br>
+            <strong>Cybersecurity in Manufacturing:</strong>
+
+            With increased connectivity, the need for robust cybersecurity in manufacturing is critical. EMP experts can specialize in securing industrial systems from cyber threats.</br></br>
+            <strong>Cross-Disciplinary Skills:</strong>
+
+            As technologies converge, professionals with a combination of skills in both electrical and mechanical engineering will be in demand. EMP individuals can enhance their cross-disciplinary skills to stay competitive.</br></br>
+            <strong>Global Supply Chain Optimization:</strong>
+
+            EMP specialists can contribute to the optimization of global supply chains, ensuring efficiency and resilience. This involves understanding logistics, transportation, and supply chain management.</br></br>
+            <strong>Customization and Personalization:</strong>
+
+            Consumers are increasingly demanding customized products. EMP professionals can explore opportunities in designing and producing customizable products using flexible manufacturing processes.</br></br>
+            <strong>Continuous Learning:</strong>
+
+            Given the rapid pace of technological advancement, continuous learning is crucial for staying relevant in the EMP field. Professionals should be open to acquiring new skills and knowledge throughout their careers.</br></br>
+            In summary, the future of Electro-Mechanical Production offers a range of opportunities, particularly in areas related to automation, smart manufacturing, sustainable technologies, and the integration of digital solutions. Continuous learning and adaptability will be key for individuals to thrive in this evolving landscape.
+            `
+
+        }
+        else if (data.includes('tool') && !data.includes('usa') && !data.includes('how')) {
             bdata = `
             These are some mechanical tools
             </br></br>
@@ -123,7 +179,7 @@ function generate() {
             Bulb holder </br>
             Chain saw </br>
             </br>
-            <strong>Measuring Tools</strong>
+            <strong>Measuring Tools</strong></br>
             Calliper </br>
             Elbow Scale </br>
             Inch tape </br>
@@ -131,6 +187,7 @@ function generate() {
             Thermo meter </br>
             `
         }
+
         else if (data.includes('what') && data.includes('emp') && !data.includes('club')) {
 
             bdata = 'EMP, or Electro-Mechanical Production, refers to the manufacturing process that combines electrical and mechanical components to create finished products.'
@@ -155,7 +212,7 @@ function generate() {
             </br></br>
             <strong>Vice president:</strong>
             <div style='display:flex ; align-items: center;'>
-                <img src='https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg' style = 'width : 100px; border-radius: 500px; margin-right: 10px'></img> <strong>Vanshika Chauhan from 9th-B</strong>
+                <img src='' style = 'width : 100px; border-radius: 500px; margin-right: 10px'></img> <strong>Vanshika Chauhan from 9th-B</strong>
             </div>
             </br></br>
             <strong>Project Manager:</strong>
@@ -170,7 +227,7 @@ function generate() {
             </br></br>
             <strong>Club Secretary:</strong>
             <div style='display:flex ; align-items: center;'>
-                <img src='https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg' style = 'width : 100px; border-radius: 500px; margin-right: 10px'></img> <strong>Prakhar Mathur from 9th-C</strong>
+                <img src='../asset/vanshika.png' style = 'width : 100px; border-radius: 500px; margin-right: 10px'></img> <strong>Prakhar Mathur from 9th-C</strong>
             </div>
             </br></br>
             <strong>Event Manager:</strong>
@@ -233,42 +290,36 @@ function generate() {
             bdata = 'To enhance students learning , their interest towards mechatronics .'
 
         }
-        else if (!data.includes('vice') && data.includes('president')) {
+        else if (!data.includes('vice') && data.includes('president') || data.includes('manav')) {
             bdata = `
             <div style='display:flex ; align-items: center;'>
                 <img src='../asset/manav.jpeg' style = 'width : 100px; border-radius: 500px; margin-right: 10px'></img> <strong>Manav Jha is our president from 9th b</strong>
             </div>
             `
         }
-        else if (data.includes('vice')) {
-            bdata = `
-            <div style='display:flex ; align-items: center;'>
-                <img src='https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg' style = 'width : 100px; border-radius: 500px; margin-right: 10px'></img> <strong>Vanshika Chauhan is our Vice-president from 9th-B</strong>
-            </div>
-            `
-        }
-        else if(data.includes('project manager')) {
+
+        else if (data.includes('project manager') || data.includes('bablu')) {
             bdata = `
             <div style='display:flex ; align-items: center;'>
                 <img src='../asset/bubula.jpeg' style = 'width : 100px; border-radius: 500px; margin-right: 10px'></img> <strong>Bablu Joshi is our Project manager from 9th-B</strong>
             </div>
             `
         }
-        else if (data.includes('technical')) {
+        else if (data.includes('technical') || data.includes('dev raj')) {
             bdata = `
             <div style='display:flex ; align-items: center;'>
                 <img src='../asset/dev.jpeg' style = 'width : 100px; border-radius: 500px; margin-right: 10px'></img> <strong>Dev Raj is our Technical head from 9th-B</strong>
             </div>
             `
         }
-        else if (data.includes('secretary')) {
+        else if (data.includes('secretary') || data.includes('prakhar')) {
             bdata = `
             <div style='display:flex ; align-items: center;'>
-                <img src='https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg' style = 'width : 100px; border-radius: 500px; margin-right: 10px'></img> <strong>Prakhar Mathur is our Club Secretary from 9th-C</strong>
+                <img src='../asset/vanshika.png' style = 'width : 100px; border-radius: 500px; margin-right: 10px'></img> <strong>Prakhar Mathur is our Club Secretary from 9th-C</strong>
             </div>
             `
         }
-        else if (data.includes('event manager')) {
+        else if (data.includes('event manager') || data.includes('harshit')) {
             bdata = `
             <div style='display:flex ; align-items: center;'>
                 <img src='../asset/harshit.jpeg' style = 'width : 100px; border-radius: 500px; margin-right: 10px'></img> <strong>Harshit Sharma is our Event manager from 9th-B</strong>
@@ -285,7 +336,46 @@ function generate() {
             </div>
             `
         }
-
+        else if (data.includes('ananya')) {
+            bdata = `
+            <div style='display:flex ; align-items: center;'>
+                <img src='../asset/ananya.jpeg' style = 'width : 100px; border-radius: 500px; margin-right: 10px'></img> <strong>Ananya Jha is our Club coordinator 2 from 9th-A</strong>
+            </div>
+            `
+        }
+        else if (data.includes('taiayba')) {
+            bdata = `
+            <div style='display:flex ; align-items: center; margin-block:5px'>
+                <img src='../asset/taiyaba.jpeg' style = 'width : 100px; border-radius: 500px; margin-right: 10px'></img> <strong>Taiyaba is our Club coordinator 1 from 9th-B</strong>
+            </div>
+            `
+        }
+        else if (data.includes('study material') && !data.includes('9') && !data.includes('10')) {
+            bdata = `
+            Sure Here is the download links for class 9th and 10th: </br></br>
+            <div style='display:flex;flex-wrap:wrap;width:100%'>
+            <a href="https://codeload.github.com/AnonymousSparker/empGrad9/zip/main" download="Units.zip" class='downloadBtn'>9th Study Material</a>
+            <a href="https://codeload.github.com/AnonymousSparker/empGrad10/zip/main" download="Units.zip" class='downloadBtn'>10th Study Material</a>
+            <div style='display:flex;flex-wrap:wrap'>
+            `
+        }
+        else if (data.includes('study material') && data.includes('9') && !data.includes('10')) {
+            bdata = `
+            Sure Here is the download link for 9th grade: </br></br>
+            <div style='display:flex;flex-wrap:wrap;width:100%'>
+            <a href="https://codeload.github.com/AnonymousSparker/empGrad9/zip/main" download="Units.zip" class='downloadBtn'>9th Study Material</a>
+            <div style='display:flex;flex-wrap:wrap'>
+            `
+        }
+        else if (data.includes('study material') && !data.includes('9') && data.includes('10')) {
+            bdata = `
+            Sure Here is the download link for class 10th: </br></br>
+            <div style='display:flex;flex-wrap:wrap;width:100%'>
+            
+            <a href="https://codeload.github.com/AnonymousSparker/empGrad10/zip/main" download="Units.zip" class='downloadBtn'>10th Study Material</a>
+            <div style='display:flex;flex-wrap:wrap'>
+            `
+        }
         // else if (data.includes('mentor') || data.includes('teacher')) {
         //     bdata = `
         //     <div style='display:flex ; align-items: center; margin-block:5px'>
@@ -303,7 +393,7 @@ function generate() {
             function containsMechatronicsTerm(inputString) {
                 return mechatronicsTerms.some(term => inputString.includes(term));
             }
-            
+
             // Iterate through the chatbotRequests array
             for (let i = 0; i < chatbotRequests.length; i++) {
                 // Check if the current item is present in the input string
@@ -318,8 +408,8 @@ function generate() {
 
 
             const testString = 'This is a string with robotics and programming.';
-            
-            if (containsMechatronicsTerm(data)&&!containsEroticTerm(data)) {
+
+            if (containsMechatronicsTerm(data) && !containsEroticTerm(data)) {
                 data = data.replace('emp', 'electro mechanical production')
                 async function fetchData() {
                     try {
@@ -444,4 +534,3 @@ document.addEventListener('keydown', function (event) {
         generate()
     }
 });
-
