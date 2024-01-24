@@ -56,7 +56,7 @@ function generate() {
 
     // Feel free to use or modify this array as needed.
     function containsEroticTerm(inputString) {
-                return erotic.some(term => inputString.includes(term));
+                return eroticWords.some(term => inputString.includes(term));
             }
     if (containsEroticTerm(data)) {
                 bdata = 'I am not trained yet to repond to abusive words or terms but trained only to answer queries related to EMP. please fill your query in this <a href="https://forms.gle/8gbRRSdgeUfSfTAu7">form</a> if you feel we made a mistake guessing your prompt so my developer can update me. '
