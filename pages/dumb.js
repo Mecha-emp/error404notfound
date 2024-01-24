@@ -40,10 +40,9 @@ function generate() {
     const sect = document.getElementById('page1')
 
 
-    data = data.toLowerCase()
-    data = data.replace("'", '')
+    
     const chatbotRequests = ["please give", "i need information", "could you assist", "do you know", "how does", "could you", "give me", "give me", "i have a question", "could you clarify", "provide some details on", "i need", "share your", "what is your", "i wouldd like to learn more about", "can you", "tell me your", "provide information about", "guide me", , "tell me ", "i have a query about", "please share your thoughts",];
-    const eroticWords = ['sex','nang','xxx','porn','chud','chut','condom','lund','pussy','boob','gand','kutta','kutti','kuti','madher','chod','randi','randa','lode','loda','lode','bhosd','gay','leabian','trans','taiyab','ananya','fuck','mother','father','sucking','tanvi','abhinav','bablu','pankaj','manav','nigga','nikhil','nehal','simran','yanshika','kaif','kiss','blowjob','handjob','threesome','gangbang','bitch','girl','vanshika','deepshikha','vipin','behencho','launda','hentai','memes','carryminati','abusing','sperm','cumshot','semen']
+    const eroticWords = ['sex','nang','xxx','mukta','porn','chud','chut','condom','lund','pussy','boob','gand','kutta','kutti','kuti','madher','chod','randi','randa','lode','loda','lode','bhosd','gay','leabian','trans','ananya','fuck','mother','father','sucking','tanvi','abhinav','bablu','pankaj','manav','nigga','nikhil','nehal','simran','yanshika','kaif','kiss','blowjob','handjob','threesome','gangbang','bitch','girl','vanshika','deepshikha','vipin','behencho','launda','hentai','memes','carryminati','abusing','sperm','cumshot','semen']
     const mechatronicsTerms = ['auto', 'dc', 'ac', 'control', 'bot', 'sens', 'actuator', 'plc', 'hmi', 'pid', 'motion', 'vision', 'integration', 'embedded', 'hydraulics', 'pneumatics', 'design', 'programming', 'microcontrollers', 'motors', 'kinematics', 'dynamics', 'cad', 'cam', 'machine', 'mechaedu', 'industry', 'iot', 'learning', 'ai', 'sustainable', 'efficiency', 'vibration', 'prototyping', 'simulations', 'fault', 'dsp', 'electromechanical', 'systems', 'modeling', 'digitaltwin', 'testing', 'cobots', 'scada', 'mems', 'vr', 'electrohydraulic', 'electropneumatic', 'motion', 'manipulators', 'automatic', 'teleoperation', 'microcontroller', 'realtime', 'analysis', 'kinematics', 'optimization', 'bearings', 'nonlinear', 'adaptive', 'biomechatronics', 'humanoid', 'ethics', 'flexible', 'prototyping', 'computervision', 'telecommunications', 'acquisition', 'fea', 'raspberrypi', 'arduino', 'memssensors', 'control', 'tactile', 'applications', 'drones', 'agvs', 'materials', 'monitoring', 'fuzzylogic', 'agriculture', 'renewable', 'digitaltwin', 'exoskeletons', 'smartmaterials', 'mri', 'hybrid', 'swarm', 'biomechanics', 'wearable', 'neuralnetworks', 'simulation', 'modeling', 'motors', 'sensors', 'actuators', 'controllers', 'encoders', 'gears', 'servos', 'microcontrollers', 'power-supplies', 'batteries', 'chassis', 'frames', 'wheels', 'legs', 'joints', 'links', 'cables', 'connectors', 'brackets', 'bearings', 'grippers', 'end-effectors', 'cams', 'pulleys', 'belts', 'slides', 'rails', 'guides', 'switches', 'relays', 'valves', 'pumps', 'nozzles', 'sprayers', 'tanks', 'screws', 'nuts', 'bolts', 'washers', 'nuts-and-bolts', 'soldering-iron', 'welding-kit', 'circuit-boards', 'modules', 'solenoids', 'plugs', 'adapters', 'solder', 'heat-sinks', 'resistor', 'led', 'button', 'potentiometer', 'servo', 'motor', 'relay', 'transistor', 'diode', 'capacitor', 'breadboard', 'jumperwire', 'lcd', 'sensor', 'encoder', 'gyroscope', 'accelerometer', 'ultrasonic', 'infrared', 'bluetooth', 'wifi', 'gps', 'rtc', 'sdcard', 'steppermotor', 'driver', 'shield', 'display', 'matrix', 'touchscreen', 'piezo', 'sound', 'microphone', 'speaker', 'amplifier', 'thermistor', 'dhtsensor', 'humidity', 'gas', 'rfid', 'nfc', 'magnetic', 'photoresistor', 'colorsensor', 'irremote', 'vibration', 'joystick', 'rfmodule', 'polarize', 'emp', 'polarise', 'robot', 'induct', 'elect', 'switch', 'button', "computer", "software", "hardware", "keyboard", "monitor", "mouse",
         "processor", "memory", "network", "server", "database", "firewall",
         "algorithm", "encryption", "program", "browser", "operating system",
@@ -56,15 +55,27 @@ function generate() {
 
     // Feel free to use or modify this array as needed.
     function containsEroticTerm(inputString) {
-                return eroticWords.some(term => inputString.includes(term));
-            }
-    if (containsEroticTerm(data)) {
-                bdata = 'I am not trained yet to repond to abusive words or terms but trained only to answer queries related to EMP. please fill your query in this <a href="https://forms.gle/8gbRRSdgeUfSfTAu7">form</a> if you feel we made a mistake guessing your prompt so my developer can update me. '
-            }
-    else if (stripped !== "") {
-        elem.setAttribute('class', 'chat user')
-        createMsg('You', data, elem)
+        return eroticWords.some(term => inputString.includes(term));
+    }
 
+    if (stripped !== "") {
+        elem.setAttribute('class', 'chat user')
+        elem.innerHTML = `
+    <div class="chat_left">
+            <p>
+                <strong>You </strong>
+            </p>
+            </div>
+            <div class=" chat_right">
+            <p class='UserResponse' id='bot${id}'>${data}</p>
+            </div>
+    </div>
+    `
+
+    cont.append(elem)
+        data = data.toLowerCase()
+    data = data.replace("'", '')
+        
         if (sect.style.paddingBottom != 'calc(100vh - 350px)') {
             sect.style.paddingBottom = 'calc(100vh - 350px)'
         }
@@ -75,13 +86,51 @@ function generate() {
 
 
         belem.setAttribute('class', 'chat bot')
-
-        if (data.includes('hello') || data.includes('hey') || data.includes('hi ') || data.includes('good morning') || data.includes('good afternoon') || data.includes('good evening')) {
+        if (containsEroticTerm(data)) {
+            bdata = 'I am trained not to repond on abusive words or terms but trained only to answer queries related to EMP. please fill your query in this <a href="https://forms.gle/8gbRRSdgeUfSfTAu7">form</a> if you feel we made a mistake guessing your prompt so my developer can update me. '
+        } 
+        else if (data.includes('hello') || data.includes('hey') || data.includes('good morning') || data.includes('good afternoon') || data.includes('good evening')) {
 
             bdata = 'Hi, how can I help you?🙂'
 
         }
+        else if(data.includes('hi')&&!data.includes('hin')&&!data.includes('hik')&&!data.includes('shi')){
+            bdata = 'Hi, how can I help you ?🙂'
+        }else if (data.includes('how are you')) {
 
+            bdata = 'I am fine, what about you ?'
+
+        }else if (data.includes('your name') || data.includes('who are you')|| data.includes('yourself')) {
+
+            bdata = 'Myself Mecha, how can I help you?🙂'
+
+        }
+        else if(data.includes('tool')&&!data.includes('usa')&&!data.includes('use')){
+            bdata = `
+            These are some mechanical tools
+            </br></br>
+            <strong>Mechanical Tools</strong></br>
+            Screw </br>
+            Hammer </br>
+            Screw Driver </br>
+            Plier  </br>
+            Wrench 
+            </br></br>
+            <strong>Electrical Tools</strong></br>
+            Soldering iron </br>
+            Glue Gun </br>
+            Drill </br>
+            Bulb holder </br>
+            Chain saw </br>
+            </br>
+            <strong>Measuring Tools</strong>
+            Calliper </br>
+            Elbow Scale </br>
+            Inch tape </br>
+            Multi Meter </br>
+            Thermo meter </br>
+            `
+        }
         else if (data.includes('what') && data.includes('emp') && !data.includes('club')) {
 
             bdata = 'EMP, or Electro-Mechanical Production, refers to the manufacturing process that combines electrical and mechanical components to create finished products.'
@@ -198,7 +247,7 @@ function generate() {
             </div>
             `
         }
-        else if (data.includes('project manager')) {
+        else if(data.includes('project manager')) {
             bdata = `
             <div style='display:flex ; align-items: center;'>
                 <img src='../asset/bubula.jpeg' style = 'width : 100px; border-radius: 500px; margin-right: 10px'></img> <strong>Bablu Joshi is our Project manager from 9th-B</strong>
@@ -254,9 +303,7 @@ function generate() {
             function containsMechatronicsTerm(inputString) {
                 return mechatronicsTerms.some(term => inputString.includes(term));
             }
-            function containsEroticTerm(inputString) {
-                return erotic.some(term => inputString.includes(term));
-            }
+            
             // Iterate through the chatbotRequests array
             for (let i = 0; i < chatbotRequests.length; i++) {
                 // Check if the current item is present in the input string
@@ -290,7 +337,7 @@ function generate() {
 
                         const apiUrl3 = `https://www.googleapis.com/customsearch/v1?q=${encodeURIComponent(query)}&key=${apiKey3}&cx=${cx3}`;
 
-                        const response = await fetch(apiUrl1);
+                        const response = await fetch(apiUrl);
 
                         // }
                         // catch (error) {
@@ -364,7 +411,7 @@ function generate() {
                 // Call the asynchronous function
                 fetchData();
 
-            } 
+            }
             else {
                 bdata = 'I am a learing Bot and trained only to answer queries related to EMP. please fill your query in this <a href="https://forms.gle/8gbRRSdgeUfSfTAu7">form</a> if you feel we made a mistake guessing your prompt so my developer can update me. '
             }
@@ -397,3 +444,4 @@ document.addEventListener('keydown', function (event) {
         generate()
     }
 });
+
