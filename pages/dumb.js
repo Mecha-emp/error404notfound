@@ -43,7 +43,7 @@ function generate() {
     data = data.toLowerCase()
     data = data.replace("'", '')
     const chatbotRequests = ["please give", "i need information", "could you assist", "do you know", "how does", "could you", "give me", "give me", "i have a question", "could you clarify", "provide some details on", "i need", "share your", "what is your", "i wouldd like to learn more about", "can you", "tell me your", "provide information about", "guide me", , "tell me ", "i have a query about", "please share your thoughts",];
-
+    const eroticWords = ['sex','nang','xxx','porn','chud','chut','condom','lund','pussy','boob','gand','kutta','kutti','kuti','madher','chod','randi','randa','lode','loda','lode','bhosd','gay','leabian','trans','taiyab','ananya','fuck','mother','father','sucking','tanvi','abhinav','bablu','pankaj','manav','nigga','nikhil','nehal','simran','yanshika','kaif','kiss','blowjob','handjob','threesome','gangbang','bitch','girl','vanshika','deepshikha','vipin','behencho','launda','hentai','memes','carryminati','abusing','sperm','cumshot','semen']
     const mechatronicsTerms = ['auto', 'dc', 'ac', 'control', 'bot', 'sens', 'actuator', 'plc', 'hmi', 'pid', 'motion', 'vision', 'integration', 'embedded', 'hydraulics', 'pneumatics', 'design', 'programming', 'microcontrollers', 'motors', 'kinematics', 'dynamics', 'cad', 'cam', 'machine', 'mechaedu', 'industry', 'iot', 'learning', 'ai', 'sustainable', 'efficiency', 'vibration', 'prototyping', 'simulations', 'fault', 'dsp', 'electromechanical', 'systems', 'modeling', 'digitaltwin', 'testing', 'cobots', 'scada', 'mems', 'vr', 'electrohydraulic', 'electropneumatic', 'motion', 'manipulators', 'automatic', 'teleoperation', 'microcontroller', 'realtime', 'analysis', 'kinematics', 'optimization', 'bearings', 'nonlinear', 'adaptive', 'biomechatronics', 'humanoid', 'ethics', 'flexible', 'prototyping', 'computervision', 'telecommunications', 'acquisition', 'fea', 'raspberrypi', 'arduino', 'memssensors', 'control', 'tactile', 'applications', 'drones', 'agvs', 'materials', 'monitoring', 'fuzzylogic', 'agriculture', 'renewable', 'digitaltwin', 'exoskeletons', 'smartmaterials', 'mri', 'hybrid', 'swarm', 'biomechanics', 'wearable', 'neuralnetworks', 'simulation', 'modeling', 'motors', 'sensors', 'actuators', 'controllers', 'encoders', 'gears', 'servos', 'microcontrollers', 'power-supplies', 'batteries', 'chassis', 'frames', 'wheels', 'legs', 'joints', 'links', 'cables', 'connectors', 'brackets', 'bearings', 'grippers', 'end-effectors', 'cams', 'pulleys', 'belts', 'slides', 'rails', 'guides', 'switches', 'relays', 'valves', 'pumps', 'nozzles', 'sprayers', 'tanks', 'screws', 'nuts', 'bolts', 'washers', 'nuts-and-bolts', 'soldering-iron', 'welding-kit', 'circuit-boards', 'modules', 'solenoids', 'plugs', 'adapters', 'solder', 'heat-sinks', 'resistor', 'led', 'button', 'potentiometer', 'servo', 'motor', 'relay', 'transistor', 'diode', 'capacitor', 'breadboard', 'jumperwire', 'lcd', 'sensor', 'encoder', 'gyroscope', 'accelerometer', 'ultrasonic', 'infrared', 'bluetooth', 'wifi', 'gps', 'rtc', 'sdcard', 'steppermotor', 'driver', 'shield', 'display', 'matrix', 'touchscreen', 'piezo', 'sound', 'microphone', 'speaker', 'amplifier', 'thermistor', 'dhtsensor', 'humidity', 'gas', 'rfid', 'nfc', 'magnetic', 'photoresistor', 'colorsensor', 'irremote', 'vibration', 'joystick', 'rfmodule', 'polarize', 'emp', 'polarise', 'robot', 'induct', 'elect', 'switch', 'button', "computer", "software", "hardware", "keyboard", "monitor", "mouse",
         "processor", "memory", "network", "server", "database", "firewall",
         "algorithm", "encryption", "program", "browser", "operating system",
@@ -250,7 +250,9 @@ function generate() {
             function containsMechatronicsTerm(inputString) {
                 return mechatronicsTerms.some(term => inputString.includes(term));
             }
-
+            function containsEroticTerm(inputString) {
+                return erotic.some(term => inputString.includes(term));
+            }
             // Iterate through the chatbotRequests array
             for (let i = 0; i < chatbotRequests.length; i++) {
                 // Check if the current item is present in the input string
@@ -265,7 +267,8 @@ function generate() {
 
 
             const testString = 'This is a string with robotics and programming.';
-            if (containsMechatronicsTerm(data)) {
+            
+            if (containsMechatronicsTerm(data)&&!containsEroticTerm(data)) {
                 data = data.replace('emp', 'electro mechanical production')
                 async function fetchData() {
                     try {
@@ -283,7 +286,7 @@ function generate() {
 
                         const apiUrl3 = `https://www.googleapis.com/customsearch/v1?q=${encodeURIComponent(query)}&key=${apiKey3}&cx=${cx3}`;
 
-                        const response = await fetch(apiUrl3);
+                        const response = await fetch(apiUrl1);
 
                         // }
                         // catch (error) {
@@ -357,7 +360,10 @@ function generate() {
                 // Call the asynchronous function
                 fetchData();
 
-            } else {
+            }else if (containsEroticTerm(data)) {
+                bdata = 'I am not trained yet to repond to abusive words or terms but trained only to answer queries related to EMP. please fill your query in this <a href="https://forms.gle/8gbRRSdgeUfSfTAu7">form</a> if you feel we made a mistake guessing your prompt so my developer can update me. '
+            } 
+            else {
                 bdata = 'I am a learing Bot and trained only to answer queries related to EMP. please fill your query in this <a href="https://forms.gle/8gbRRSdgeUfSfTAu7">form</a> if you feel we made a mistake guessing your prompt so my developer can update me. '
             }
 
@@ -389,4 +395,3 @@ document.addEventListener('keydown', function (event) {
         generate()
     }
 });
-
