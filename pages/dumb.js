@@ -1,7 +1,7 @@
 if (localStorage.getItem('apiNum') == null) {
     localStorage.setItem('apiNum', '1')
 }
-if (localStorage.getItem('visit') == null) {
+// if (localStorage.getItem('visit') == null) {
     swal({
         title: "Introducing Mecha",
         text: `A chatbot who will help with all your queries related to EMP. Please use english only ❤`,
@@ -9,7 +9,7 @@ if (localStorage.getItem('visit') == null) {
         button: "ok ",
     });
     localStorage.setItem('visit', '1')
-}
+// }
 
 let input = document.getElementById('input')
 let send = document.getElementById('send')
@@ -99,6 +99,30 @@ function generate() {
             <div style='display:flex ; align-items: center;'>
                 <img src='../asset/vanshika.png' style = 'width : 100px; border-radius: 500px; margin-right: 10px'></img> <strong>Vanshika Chauhan is our Vice-president from 9th-B</strong>
             </div>
+            `
+        }else if (data.includes('vice') && !data.includes('evice') || data.includes('vanshika')) {
+            bdata = `
+            <div style='display:flex ; align-items: center;'>
+                <img src='../asset/vanshika.png' style = 'width : 100px; border-radius: 500px; margin-right: 10px'></img> <strong>Vanshika Chauhan is our Vice-president from 9th-B</strong>
+            </div>
+            `
+        }
+        else if (data.includes('emp') && data.includes('daily') && data.includes('life')) {
+            bdata = `
+            It is used to move objects, create conveniences, and help us achieve what we cannot do with human power alone. From hydropower to wind power to the machines that make the machine that generate elctricity, mechanical energy is not only present but it's the driving force.
+            `
+        }
+        else if (data.includes('emp') && data.includes('daily') && data.includes('life')) {
+            bdata = `
+            Sure, providing some names of industries that use Mechatronics/EMP </br></br>
+            TATA </br>
+            BMW </br>
+            Philips </br>
+            Havells </br>
+            Lamborghini </br>
+            Nissan </br>
+</br>
+     These are some companies that use Mechatronics.        
             `
         }
         else if (data.includes('hi') && !data.includes('hin') && !data.includes('hik') && !data.includes('shi')) {
