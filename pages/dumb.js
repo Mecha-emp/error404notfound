@@ -312,11 +312,6 @@ function generate() {
         else if (data.includes('full form') && data.includes('emp')) {
 
             bdata = 'Electro Mechanical Production'
-
-
-
-
-
         }
         else if (data.includes('why') && data.includes('emp') && data.includes('club')) {
 
@@ -495,26 +490,7 @@ function generate() {
 
                             console.log(refined_data)
                             createMsg('Mecha', '. . .', belem, id);
-                            if (bdata.includes('how to')){
-                                var typed = new Typed(`#completion${id}`, {
-                                    strings: [`I am sorry to say but I am not really good at expalining tutorials but you can refer to the tutorial link :</br> </br><strong>source:</strong></br> <a href='${bdata.link}' style='display: inline-block;
-                                    width: auto;
-                                    max-width: 300px;
-                                    overflow: hidden;
-                                    text-overflow: ellipsis;
-                                    text-wrap: nowrap;
-                                    background: rgb(240, 242, 245);
-                                    padding: 2.5px;
-                                    border-radius: 5px;
-                                    color: black;
-                                    text-decoration: none;
-                                    border: 0.5px solid rgb(100, 100, 100)'>${bdata.link}</a>`],
-                                    typeSpeed: 5,
-                                    cursorChar: '',
-                                    startDelay: 1000
-                                });
-                            }
-                            else{
+                            
                                 var typed = new Typed(`#completion${id}`, {
                                     strings: [`${refined_data}</br> </br><strong>source:</strong></br> <a href='${bdata.link}' style='display: inline-block;
                                     width: auto;
@@ -532,7 +508,7 @@ function generate() {
                                     cursorChar: '',
                                     startDelay: 1000
                                 });
-                            }
+                            
 
                             // Continue with other operations that depend on bdata
 
