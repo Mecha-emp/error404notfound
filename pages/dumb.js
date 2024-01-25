@@ -108,7 +108,16 @@ function generate() {
 
             bdata = 'I am fine, what about you ?'
 
-        } else if (data.includes('intro') && data.includes('your')) {
+        }else if (data.includes('thank')) {
+
+            bdata = `
+            Hello, I'm Mecha, the chatbot created for the EMP club by Dev Raj. Many of my features have been suggested by our club members, and I'm constantly learning and evolving. My knowledge is primarily derived from study materials, and I have the ability to search the entire internet to find relevant answers for your queries. Please keep in mind that I am still in my learning phase, so I may not always provide exact answers, but my developer is actively updating me to improve my performance over time.</br></br>
+
+            You can ask me any EMP-related questions or inquire about the EMP club, and I'll do my best to provide suitable answers. Additionally, I can offer study materials to assist you in your learning journey. Thank you for your understanding and patience as I continue to enhance my capabilities.</br></br>
+            `
+
+        } 
+        else if (data.includes('intro') && data.includes('your')) {
 
             bdata = `
             Hello, I'm Mecha, the chatbot created for the EMP club by Dev Raj. Many of my features have been suggested by our club members, and I'm constantly learning and evolving. My knowledge is primarily derived from study materials, and I have the ability to search the entire internet to find relevant answers for your queries. Please keep in mind that I am still in my learning phase, so I may not always provide exact answers, but my developer is actively updating me to improve my performance over time.</br></br>
@@ -462,24 +471,44 @@ function generate() {
 
                             console.log(refined_data)
                             createMsg('Mecha', '. . .', belem, id);
-
-                            var typed = new Typed(`#completion${id}`, {
-                                strings: [`${refined_data}</br> </br><strong>source:</strong></br> <a href='${bdata.link}' style='display: inline-block;
-                                width: auto;
-                                max-width: 300px;
-                                overflow: hidden;
-                                text-overflow: ellipsis;
-                                text-wrap: nowrap;
-                                background: rgb(240, 242, 245);
-                                padding: 2.5px;
-                                border-radius: 5px;
-                                color: black;
-                                text-decoration: none;
-                                border: 0.5px solid rgb(100, 100, 100)'>${bdata.link}</a>`],
-                                typeSpeed: 5,
-                                cursorChar: '',
-                                startDelay: 1000
-                            });
+                            if (bdata.includes('how to')){
+                                var typed = new Typed(`#completion${id}`, {
+                                    strings: [`I am sorry to say but I am not really good at expalining tutorials but you can refer to the tutorial link :</br> </br><strong>source:</strong></br> <a href='${bdata.link}' style='display: inline-block;
+                                    width: auto;
+                                    max-width: 300px;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    text-wrap: nowrap;
+                                    background: rgb(240, 242, 245);
+                                    padding: 2.5px;
+                                    border-radius: 5px;
+                                    color: black;
+                                    text-decoration: none;
+                                    border: 0.5px solid rgb(100, 100, 100)'>${bdata.link}</a>`],
+                                    typeSpeed: 5,
+                                    cursorChar: '',
+                                    startDelay: 1000
+                                });
+                            }
+                            else{
+                                var typed = new Typed(`#completion${id}`, {
+                                    strings: [`${refined_data}</br> </br><strong>source:</strong></br> <a href='${bdata.link}' style='display: inline-block;
+                                    width: auto;
+                                    max-width: 300px;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    text-wrap: nowrap;
+                                    background: rgb(240, 242, 245);
+                                    padding: 2.5px;
+                                    border-radius: 5px;
+                                    color: black;
+                                    text-decoration: none;
+                                    border: 0.5px solid rgb(100, 100, 100)'>${bdata.link}</a>`],
+                                    typeSpeed: 5,
+                                    cursorChar: '',
+                                    startDelay: 1000
+                                });
+                            }
 
                             // Continue with other operations that depend on bdata
 
