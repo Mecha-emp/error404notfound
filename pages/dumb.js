@@ -333,7 +333,7 @@ function generate() {
             </div>
             `
         }
-        else if (data.includes('technical') || data.includes('dev raj')) {
+        else if (data.includes('technical') || data.includes('dev raj')|| data.includes('devraj')) {
             bdata = `
             <div style='display:flex ; align-items: center;'>
                 <img src='../asset/dev.jpeg' style = 'width : 100px; border-radius: 500px; margin-right: 10px'></img> <strong>Dev Raj is our Technical head from 9th-B</strong>
