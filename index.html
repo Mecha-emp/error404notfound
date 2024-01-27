@@ -2,15 +2,6 @@
 <html lang="en">
 
 <head>
-    <script type="text/javascript">
-(function() {
-window.__insp = window.__insp || [];
-__insp.push(['wid', 1479656120]);
-var ldinsp = function(){
-if(typeof window.__inspld != "undefined") return; window.__inspld = 1; var insp = document.createElement('script'); insp.type = 'text/javascript'; insp.async = true; insp.id = "inspsync"; insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://cdn.inspectlet.com/inspectlet.js?wid=1479656120&r=' + Math.floor(new Date().getTime()/3600000); var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(insp, x); };
-setTimeout(ldinsp, 0);
-})();
-    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="asset/icon.ico" type="image/x-icon">
@@ -174,16 +165,85 @@ setTimeout(ldinsp, 0);
         <p logo></p>
         This Site is managed by <a href="https://github.com/DevRaj79" style="margin: 5px;" target="_blank"> Dev Raj</a>
     </footer>
-    <!-- Element to contain animated typing -->
 
-
-    <!-- Load library from the CDN -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <script src="boiler.js"></script>
+
+
+
+    <button id="edit"
+        style="position: fixed; z-index: 99; bottom: 10px; right: 10px;width: 50px;height: 50px;font-size: larger;border-radius: 500px;border: 0; background: rgb(30, 30, 30);color: white;cursor: pointer;">
+        <ion-icon name="brush"></ion-icon>
+    </button>
 
     <!-- Setup and start animation! -->
     <script>
+        const btn = document.getElementById('edit')
+        // var cancel = null
+        // var save = null
+        // var themenu = null
+        btn.addEventListener('click', () => {
+            let menu = document.createElement('div')
+            let data = `
+            <div id='menu_top'>
+                <div id="color-picker"></div>
+                <div id="color-indicator" class="color-indicator"></div>
+            </div>    
+            <div id='menu_bottom'>
+                <button id='theme_cancel' onclick="
+                document.getElementById('edit').removeAttribute('disabled')
+                document.getElementById('thememenu').remove()
+                ">cancel</button>
+                <button onclick='reset()'>reset</button>
+                <button id='theme_save' onclick='save()'>save </button>
+                
+            </div>    
+            
+            
+            `
+
+
+            menu.setAttribute('id', 'thememenu')
+
+            // cancel = document.getElementById('theme_cancel')
+            // save = document.getElementById('theme_save')
+            // themenu = 
+
+            // cancel.addEventListener('click', () => {
+
+            // })
+
+            btn.setAttribute('disabled', '')
+            // menu.style.height = '600px'
+            menu.innerHTML = data
+            document.body.append(menu)
+            openMenu()
+
+
+        })
+        let selectedColor = ''
+        function save() {
+            document.getElementById('home').style.background = selectedColor
+            // document.getElementById('page1').style.background = selectedColor
+            localStorage.setItem('cc', selectedColor)
+        }
+        function openMenu() {
+            let colorIndicator = document.getElementById('color-indicator');
+            const colorPicker = new iro.ColorPicker("#color-picker", {
+                width: 180, color: "#fff"
+            });
+            colorPicker.on('color:change', function (color) {
+                colorIndicator.style.backgroundColor = color.hexString;
+                selectedColor = color.hexString;
+            });
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@jaames/iro@5"></script>
+    <script>
 
     </script>
+
 </body>
 <script src="script.js"></script>
 </body>
