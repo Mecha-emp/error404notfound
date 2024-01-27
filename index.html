@@ -227,6 +227,7 @@
             document.getElementById('home').style.background = selectedColor
             // document.getElementById('page1').style.background = selectedColor
             localStorage.setItem('cc', selectedColor)
+            window.location.reload()
         }
         function openMenu() {
             let colorIndicator = document.getElementById('color-indicator');
